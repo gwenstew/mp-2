@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import {Pokemon} from "../interfaces/Pokemon.ts";
-import SingleCard from "./SIngleCard.tsx";
+import SingleCard from "./SingleCard.tsx";
 
 //Retrieves data for pokemon cards
 
