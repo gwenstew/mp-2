@@ -22,6 +22,8 @@ export default function PokeCard(props: {data:Pokemon[]}) {
                 sprites={poke.sprites}
                 image={poke.sprites.front_default}
                 base_experience={poke.base_experience}
+                moves={poke.moves}
+                types={poke.types}
                 />
             ))}
         </AllPokeDiv>

@@ -1,9 +1,13 @@
-interface Move {
-    name:string;
+export interface Move {
+    move: {
+        name:string;
+    }
 }
 
-interface Type {
-    name:string
+export interface Type {
+    type: {
+        name:string;
+    }
 }
 
 export interface Pokemon {
@@ -14,6 +18,7 @@ export interface Pokemon {
     sprites: {
         front_default: string;
     };
-
+    moves:Move[]
+    types:Type[]
 
 }
