@@ -12,7 +12,19 @@ const PokeCardDiv=styled.div<{type:string}>`
     padding: 2%;
     margin: 1%;
     border-radius: 25px;
+    h1 {
+        text-align:center;
+    }
+    h4 {
 
+        margin: 10px;
+    }
+
+    ul {
+        margin: 10px 0; 
+        padding-left: 20px; 
+        list-style-type: none;
+    }
     background-color: ${(props) =>
         props.type == "fire" ? "#FF7518":
         props.type == "water" ? "#ADD8E6":
@@ -32,7 +44,7 @@ const PokeCardDiv=styled.div<{type:string}>`
         props.type == "dragon" ? "#9FE2BF":
         "#B2BEB5"
     }
-    
+
     
 `;
 
@@ -42,14 +54,14 @@ export default function SingleCard({name, base_experience, image, moves, types}:
         <PokeCardDiv type={primaryType}>
             <h1>{name}</h1>
             <img src={image} alt={`image of ${name}`} />
-            <p>Base Experience: {base_experience}</p>
-            <p>Moveset:</p>
+            <h4>Base Experience: {base_experience}</h4>
+            <h4>Moveset:</h4>
             <ul>
                 {moves.slice(0,5).map((moveObj: Move, index: number) => (
                     <li key={index}>{moveObj.move.name}</li> 
                 ))}
             </ul>
-            <p>Type(s):</p>
+            <h4>Type(s):</h4>
             <ul>
                 {types.map((typeObj: Type, index: number) => (
                     <li key={index}>{typeObj.type.name}</li>  // Accessing only the type name
