@@ -6,7 +6,6 @@ import PokeCard from './components/PokeCard.tsx';
 const ParentDiv=styled.div`
     width:80vw;
     margin:auto;
-    border: 5px marroon solid;
 `;
 
 function App() {

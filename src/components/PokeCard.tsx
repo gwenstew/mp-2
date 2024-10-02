@@ -8,6 +8,7 @@ const AllPokeDiv=styled.div`
     display: flex;
     flex-flow: row wrap;    
     justify-content: space-evenly;
+    background-color: bisque;
 `;
 
 
@@ -17,6 +18,7 @@ export default function PokeCard(props: {data:Pokemon[]}) {
         <AllPokeDiv>
             {props.data.map((poke: Pokemon) => (
                 <SingleCard
+                key={poke.id}
                 id={poke.id}
                 name={poke.name}
                 sprites={poke.sprites}

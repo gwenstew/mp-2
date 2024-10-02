@@ -11,6 +11,7 @@ export interface Type {
 }
 
 export interface Pokemon {
+    key:number;
     id:number;
     name:string;
     base_experience:number;
