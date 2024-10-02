@@ -15,7 +15,7 @@ function App() {
     async function fetchData(): Promise<void> {
       try {
         //fetch raw pokemon data from PokeAPI
-        const rawData = await fetch("https://pokeapi.co/api/v2/pokemon?limit=100");
+        const rawData = await fetch("https://pokeapi.co/api/v2/pokemon?limit=200");
         const { results } = await rawData.json();
 
         //map

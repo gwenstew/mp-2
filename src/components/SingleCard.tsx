@@ -18,7 +18,7 @@ const PokeCardDiv=styled.div<{type:string}>`
         props.type == "water" ? "#ADD8E6":
         props.type == "grass" ? "#2E8B57":
         props.type == "poison" ? "#9F2B68":
-        props.type == "dark" ? "darkviolet !important":
+        props.type == "dark" ? "#915F6D":
         props.type == "electric" ? "#FFD700":
         props.type == "ghost" ? "#BDB5D5":
         props.type == "ground" ? "#CC7722":
@@ -28,6 +28,8 @@ const PokeCardDiv=styled.div<{type:string}>`
         props.type == "psychic" ? "#DA70D6":
         props.type == "flying" ? "#7393B3":
         props.type == "fairy" ? "#F8C8DC":
+        props.type == "ice" ? "#CCCCFF":
+        props.type == "dragon" ? "#9FE2BF":
         "#B2BEB5"
     }
     
