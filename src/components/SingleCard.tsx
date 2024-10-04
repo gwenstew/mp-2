@@ -48,23 +48,24 @@ const PokeCardDiv=styled.div<{type:string}>`
     
 `;
 
-export default function SingleCard({name, base_experience, image, moves, types}: Pokemon) {
-    const primaryType = types[0]?.type?.name || "unknown";
+//change this to props: Pokemon
+export default function SingleCard(props: Pokemon) {
+    const primaryType = props.types[0]?.type?.name || "unknown";
     return(
         <PokeCardDiv type={primaryType}>
-            <h1>{name}</h1>
-            <img src={image} alt={`image of ${name}`} />
-            <h4>Base Experience: {base_experience}</h4>
+            <h1>{props.name}</h1>
+            <img src={props.image} alt={`image of ${props.name}`} />
+            <h4>Base Experience: {props.base_experience}</h4>
             <h4>Moveset:</h4>
             <ul>
-                {moves.slice(0,5).map((moveObj: Move, index: number) => (
+                {props.moves.slice(0,5).map((moveObj: Move, index: number) => (
                     <li key={index}>{moveObj.move.name}</li> 
                 ))}
             </ul>
             <h4>Type(s):</h4>
             <ul>
-                {types.map((typeObj: Type, index: number) => (
-                    <li key={index}>{typeObj.type.name}</li>  // Accessing only the type name
+                {props.types.map((typeObj: Type, index: number) => (
+                    <li key={index}>{typeObj.type.name}</li>  
                 ))}
             </ul>
         </PokeCardDiv>
