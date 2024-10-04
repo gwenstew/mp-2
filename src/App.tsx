@@ -18,7 +18,7 @@ function App() {
         const rawData = await fetch("https://pokeapi.co/api/v2/pokemon?limit=10");
         const { results } = await rawData.json();
 
-        //map
+        //have to fetch data for each pokemon through their url
         const pokeDetails = results.map((pokemon: {url: string}) => 
           fetch(pokemon.url).then(res => res.json()));
         const pokeData = await Promise.all(pokeDetails);
